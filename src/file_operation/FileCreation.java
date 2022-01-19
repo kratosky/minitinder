@@ -60,42 +60,6 @@ public class FileCreation
         new File(path).mkdirs();//一路的文件夹都被创建
     }
 
-    /*
-     * @description, 在指定的路径下，生成指定名称的文件
-     */
-    public static void generateFile(String absolutePath, String fileName)
-    {
-        File file= new File(absolutePath, fileName);
-        try
-        {
-            file.createNewFile();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-    }
-
-
-    /*
-     * 把value写进File
-     */
-    public static void putValueIntoFile(String absolutePath, String fileName,String value)
-    {
-        try
-        {
-            File file = new File(absolutePath,fileName);
-            FileWriter os = new FileWriter(file);
-            os.write(value);
-            os.flush(); // 清空缓冲区
-            os.close();
-        }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
-    }
 }
 
 

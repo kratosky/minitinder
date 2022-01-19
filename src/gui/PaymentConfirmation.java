@@ -1,37 +1,40 @@
-package GUI;
+package gui;
+
+import financial_management.Revenue;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import user.CheckedUser;
 
-
-public class UpdateReminder
+public class PaymentConfirmation
 {
-    private static boolean closeRegistration;
+    private static boolean paymentComplete;
     /**
      * 展示提醒窗口
      * @param userName
      */
-    public static boolean display(String userName)
+    public static boolean display(String userName,double payment,int chances, int likes)
     {
 
-        closeRegistration = false;
+        paymentComplete = false;
         // 创建舞台
         Stage stage = new Stage();
         // 设置显示模式
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("上传提醒");
-        Label label = new Label("您还未上传匹配信息，是否现在上传？");
+        stage.setTitle("付款确认");
+        String payString = String.format("¥%.2f", payment);
+        Label label = new Label("本次购买总共需要支付"+payString+"，请确认支付！");
         // 创建控件
-        Button buttonYes = new Button("上传");
-        buttonYes.setOnMouseClicked(event -> {
-            new UpdateInformation().display(userName);
-            closeRegistration = true;
+        Button buttonYes = new Button("支付");
+        buttonYes.setOnMouseClicked(event ->
+        {
+            completePurchase(userName,payment,chances, likes);
+            paymentComplete = true;
             stage.close();
         });
 
@@ -63,8 +66,30 @@ public class UpdateReminder
         stage.setScene(scene);
         //stage.show();
         stage.showAndWait();  // 等待窗体关闭才继续
-        return closeRegistration;
+        return paymentComplete;
     }
+
+    /**
+     * 确认购买，一方面系统记账，一方面用户资源数增加
+     */
+    private static void completePurchase(String userName,double payment,int chances, int likes)
+    {
+        try
+        {
+            //记账
+            Revenue.addPayment(userName, payment);
+            //资源数增加
+            CheckedUser user = CheckedUser.deserialize(userName);
+            user.changeLikeOnes(likes);
+            user.changeOpportunities(chances);
+            user.compressSerialize();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+
+    }
+
 }
-
-

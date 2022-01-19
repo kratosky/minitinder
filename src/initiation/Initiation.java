@@ -1,19 +1,20 @@
-package Initiation;
+package initiation;
 
 import java.io.*;
 import file_operation.*;
-import matchOperation.Match;
+import financial_management.Revenue;
+import match_operation.Match;
 import register.Register;
 
 
-public class dataInitiation
+public class Initiation
 {
     private static String parentPath;	//data的父路径
     private static String dataPath;	//data路径
 
     public static void main(String[] args) throws Exception
     {
-        new dataInitiation(".").createData();
+        new Initiation(".").createData();
     }
 
     /**
@@ -22,13 +23,13 @@ public class dataInitiation
      * @param path
      * @throws IOException
      */
-    public dataInitiation(String path) throws IOException
+    public Initiation(String path) throws IOException
     {
         this.parentPath = path;
         this.dataPath = path + File.separator + "data";
     }
 
-    public dataInitiation() throws IOException
+    public Initiation() throws IOException
     {
         this(".");
     }
@@ -73,12 +74,14 @@ public class dataInitiation
         new File(path).mkdirs();
         // 以上完成了data文件夹的生成
         //生成描述文件
-        FileCreation.createFile(dataPath , "Description.txt", "All code written by DDX");//初始时没有HEAD指针，提交后才初始化
+        FileCreation.createFile(dataPath , "Description.txt", "All code written by DDX");
         //生成data文件夹下的其余子文件
         Register.initRegister();
         FileCreation.createDirectory(dataPath, "users");
         FileCreation.createDirectory(dataPath, "matchRecord");
-        Match.initmatch();
+        FileCreation.createDirectory(dataPath, "Revenue");
+        Revenue.initRevenue();
+        Match.initMatch();
         return true;//全部创建成功，则返回true
     }
 

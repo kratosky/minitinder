@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
@@ -27,7 +27,7 @@ public class caculateLoan
         gridPane.add(tfAnnualInterestRate, 1, 0);
         gridPane.add(new Label("Number of Years:"), 0, 1);
         gridPane.add(tfNumberOfYears, 1, 1);
-        gridPane.add(new Label("Loan Amount:"), 0, 2);
+        gridPane.add(new Label("Price Amount:"), 0, 2);
         gridPane.add(tfLoanAmount, 1, 2);
         gridPane.add(new Label("Monthly Payment:"), 0, 3);
         gridPane.add(tfMonthlyPayment, 1, 3);
@@ -66,8 +66,8 @@ public class caculateLoan
         double loanAmount =
                 Double.parseDouble(tfLoanAmount.getText());
 
-        // Create a loan object. Loan defined in Listing 10.2
-        //Loan loan = new Loan(interest, year, loanAmount);
+        // Create a loan object. Price defined in Listing 10.2
+        //Price loan = new Price(interest, year, loanAmount);
 
         // Display monthly payment and total payment
         //tfMonthlyPayment.setText(String.format("$%.2f",loan.getMonthlyPayment()));

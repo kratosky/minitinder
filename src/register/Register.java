@@ -1,11 +1,7 @@
 package register;
 
-import matchOperation.Match;
-
 import java.io.*;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public abstract class Register

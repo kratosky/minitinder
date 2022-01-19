@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,7 +19,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Calendar;
 
-import checkedUserManagement.CheckedUserManage;
+import checked_user_management.CheckedUserManage;
 
 import static user.Gender.*;
 
@@ -73,7 +73,7 @@ public class UpdateInformation
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 400);
-        stage.setTitle("LoanCalculator"); // Set title
+        stage.setTitle("上传资料"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.show(); // Display the stage
     }

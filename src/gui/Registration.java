@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -9,9 +9,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import register.Register;
-import user.CheckedUser;
 import user.UncheckedUser;
 
 public class Registration extends Application
@@ -48,6 +48,10 @@ public class Registration extends Application
 
   private BorderPane initPane()
   {
+    HBox paneForButtons = new HBox(20);
+    paneForButtons.getChildren().addAll(btRegister,btModify);
+    paneForButtons.setAlignment(Pos.CENTER);
+
     // Create UI
     GridPane gridPane = new GridPane();
     gridPane.setHgap(5);
@@ -57,8 +61,10 @@ public class Registration extends Application
     gridPane.add(new Label("密码:"), 0, 1);
     gridPane.add(tfPassword, 1, 1);
     gridPane.add(btLogin, 0, 2);
-    gridPane.add(btRegister, 1, 2);
-    gridPane.add(btModify, 2, 2);
+    //gridPane.add(btRegister, 1, 2);
+    //gridPane.add(btModify, 2, 2);
+    gridPane.add(paneForButtons, 1, 2);
+
 
 
     // Set properties for UI
@@ -66,8 +72,8 @@ public class Registration extends Application
     tfUserName.setAlignment(Pos.BOTTOM_LEFT);
     tfPassword.setAlignment(Pos.BOTTOM_LEFT);
     GridPane.setHalignment(btLogin, HPos.LEFT);
-    GridPane.setHalignment(btRegister,HPos.CENTER);
-    GridPane.setHalignment(btModify,HPos.RIGHT);
+    //GridPane.setHalignment(btRegister,HPos.RIGHT);
+    //GridPane.setHalignment(btModify,HPos.LEFT);
 
 
     BorderPane borderPane = new BorderPane();

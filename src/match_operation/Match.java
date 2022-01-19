@@ -1,4 +1,4 @@
-package matchOperation;
+package match_operation;
 
 
 
@@ -21,7 +21,7 @@ public abstract class Match
     /**
      * 初始化match区
      */
-    public static void initmatch()
+    public static void initMatch()
     {
         try
         {

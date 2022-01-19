@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
@@ -10,7 +10,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import register.Register;
-import user.CheckedUser;
 import user.UncheckedUser;
 
 public class ChangePassWord

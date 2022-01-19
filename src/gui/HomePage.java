@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -14,8 +14,6 @@ import user.Gender;
 
 import java.util.Arrays;
 
-import checkedUserManagement.CheckedUserManage;
-
 import static user.Gender.*;
 
 public class HomePage
@@ -23,9 +21,9 @@ public class HomePage
     private final String[] genderDescr = {"男", "女", "其他"};
     private final Gender[] genderOptions = {Male, Female, Other};
     private Gender chosenGender = Male;
-    private TextField tfGender = new TextField();
-    private TextField tfYears = new TextField();
-    private TextField tfphotoFileName = new TextField();
+    private Label lblGender = new Label();
+    private Label lblYears = new Label();
+    private Label lblPhotoFileName = new Label();
     private Button btShowPhoto = new Button("展示");
     private TextArea taContact = new TextArea();
     /** Label for displaying an image and a title */
@@ -76,7 +74,7 @@ public class HomePage
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 400);
-        stage.setTitle("LoanCalculator"); // Set title
+        stage.setTitle("个人主页"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.show(); // Display the stage
     }
@@ -95,25 +93,23 @@ public class HomePage
         leftGridPane.setHgap(5);
         leftGridPane.setVgap(5);
         leftGridPane.add(new Label("性别:"), 0, 0);
-        leftGridPane.add(tfGender, 1, 0);
-        tfGender.setEditable(false);
+        leftGridPane.add(lblGender, 1, 0);
         leftGridPane.add(new Label("出生年份:"), 0, 1);
-        leftGridPane.add(tfYears, 1, 1);
-        tfYears.setEditable(false);
+        leftGridPane.add(lblYears, 1, 1);
         leftGridPane.add(new Label("照片:"), 0, 2);
-        leftGridPane.add(tfphotoFileName, 1, 2);
+        leftGridPane.add(lblPhotoFileName, 1, 2);
         leftGridPane.add(btShowPhoto, 2, 2);
         leftGridPane.add(new Label("联系方式:"), 0, 3);
         leftGridPane.add(taContact, 1, 3);
         taContact.setEditable(false);
         leftGridPane.setAlignment(Pos.CENTER);
-        tfYears.setAlignment(Pos.BOTTOM_LEFT);
+        lblYears.setAlignment(Pos.BOTTOM_LEFT);
 
 
 
 
         // 输入照片回车，可以预览照片
-        btShowPhoto.setOnAction(e -> {lblImageTitle.setGraphic(new ImageView("image/"+tfphotoFileName.getText()));});
+        btShowPhoto.setOnAction(e -> {lblImageTitle.setGraphic(new ImageView("image/"+ lblPhotoFileName.getText()));});
         return leftGridPane;
     }
 
@@ -152,6 +148,7 @@ public class HomePage
         paneForButtons.getChildren().addAll(btUpdate,btRecharge, btList,btStart,btQuit,btDeregistration);
         paneForButtons.setAlignment(Pos.CENTER);
 
+        btRecharge.setOnAction(e->{if(Buy.display(username)){updateResource(username);}});
         btUpdate.setOnAction(e->{new UpdateInformation().display(username);stage.close();});
         btQuit.setOnAction(e->{new Registration().display();stage.close();});
         btDeregistration.setOnAction(e->
@@ -174,17 +171,25 @@ public class HomePage
     private void setUserProperty(String name)
     {
         CheckedUser user = CheckedUser.deserialize(name);
-        tfYears.setText(String.valueOf(user.getBirthYear()));
-        tfphotoFileName.setText(user.getPhotoFileName());
+        lblYears.setText(String.valueOf(user.getBirthYear()));
+        lblPhotoFileName.setText(user.getPhotoFileName());
         lblOpportunities.setText(String.valueOf(user.getOpportunities()));
         lblLikeOnes.setText(String.valueOf(user.getLikeOnes()));
         taIntro.setText(user.getIntroduction());
         taContact.setText(user.getContactInformation());
-        tfGender.setText(genderDescr[Arrays.asList(genderOptions).indexOf(user.getGender())]);
+        lblGender.setText(genderDescr[Arrays.asList(genderOptions).indexOf(user.getGender())]);
     }
 
 
-
+    /**
+     * 在充值结束后，如果充值了的话，更新资源值
+     */
+    public void updateResource(String name)
+    {
+        CheckedUser user = CheckedUser.deserialize(name);
+        lblOpportunities.setText(String.valueOf(user.getOpportunities()));
+        lblLikeOnes.setText(String.valueOf(user.getLikeOnes()));
+    }
 
 }
 
