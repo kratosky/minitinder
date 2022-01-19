@@ -2,28 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;增加了add rm reset commit 等测试类，同时改进了reset方法&quot;">
-      <change afterPath="$PROJECT_DIR$/.jit/objects/2ca3545b3b319b867d5b8f59045a03dec6af8.Commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/5998781b5b4b6f94b97ed6e6d2bdf155414d17c8.Commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/5fc42b3e51214128e95153e41bab7910a3113b.Commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/769cfecf3d2ca43ac95d467f115e65d7609d4368.Commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/a0f447166b4869974d28e49847f59d28615d22.Tree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/c6b277bfb19c0c19edda52e2fddec635a57733.Tree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/cdc2e2bf66c9ad7a2c18e25d075cfb641e4058.Commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.jit/objects/e50e7483f493a8c4266efb6de1622eca13a8511.Tree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/ChangePassWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/DeregistrationAlert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/Recharge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/financial_management/SuccessMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/branches/HEAD.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/branches/HEAD.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/branches/branchMap" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/branches/branchMap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/index/trackedBlob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/index/trackedBlob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/objects/1cd265b2e0c33a34db95aa29f81ffd1286a2ada.Blob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/objects/1cd265b2e0c33a34db95aa29f81ffd1286a2ada.Blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/objects/3760a9d93834ac223fdae1faec46f2f8021c7.Blob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/objects/3760a9d93834ac223fdae1faec46f2f8021c7.Blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/objects/5ef64a24e1c55071a142a48f6d4f1a79a72aa20.Blob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/objects/5ef64a24e1c55071a142a48f6d4f1a79a72aa20.Blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/objects/608be78b4032b4dcfbaa13f59c0a48c10d85037.Blob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/objects/608be78b4032b4dcfbaa13f59c0a48c10d85037.Blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jit/objects/fddbe01857e2d3ab505bfc1dac3b38a2c8b8cd65.Blob" beforeDir="false" afterPath="$PROJECT_DIR$/.jit/objects/fddbe01857e2d3ab505bfc1dac3b38a2c8b8cd65.Blob" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitReset.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitReset.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestGC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestGC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/userlist" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/1.unchecked" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/1.unchecked" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/2.unchecked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/unchecked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jit-first-delivery.iml" beforeDir="false" afterPath="$PROJECT_DIR$/jit-first-delivery.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jit-task-one.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/branchoperation/Branch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/commander/CLI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitAdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitBranch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitCheckout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitCommit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitGC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitMerge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitReset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/core/JitRm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/fileoperation/FileCreation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/fileoperation/FileDeletion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/fileoperation/FileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/gitobject/Blob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/gitobject/Commit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/gitobject/GitObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/gitobject/Tree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/indexoperation/Index.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/jitinitiation/JitInitiation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/sha1/SHA1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/sha1/SHA1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/test/TestZip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/test/TestZlib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/test/testBranchCheckout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/jit-first-delivery/test/testLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Touse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Touse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UpdateInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/UpdateInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UpdateReminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/UpdateReminder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/caculateLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/caculateLoan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/changeScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/changeScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Initiation/dataInitiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Initiation/dataInitiation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkedUserManagement/CheckedUserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkedUserManagement/CheckedUserManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/DataInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileoperation/FileCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_operation/FileCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileoperation/FileDeletion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_operation/FileDeletion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fileoperation/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_operation/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matchOperation/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matchOperation/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/matchOperation/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/matchOperation/Selection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simple/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simple/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simple/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/successMatch/SuccessMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testGenderArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testGenderArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/testYear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/testYear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/checkedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/CheckedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/uncheckedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/UncheckedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tiger.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/what/farm/whatthehell.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/what/lily.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/what/tim/哈哈哈.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/what/turtle.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +113,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/javafx-sdk-17.0.1/lib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.15287356" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -73,15 +126,21 @@
       <recent name="indexoperation.Index" />
       <recent name="fileoperation.FileReader" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\匹配过程\src\image" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="user" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="commander" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestReset">
+  <component name="RunManager" selected="Application.Registration">
     <configuration name="CLI" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="commander.CLI" />
       <module name="jit-first-delivery" />
-      <option name="PROGRAM_PARAMETERS" value="git status" />
+      <option name="PROGRAM_PARAMETERS" value="git merge master" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="commander.*" />
@@ -92,12 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCommit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestCommit" />
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Driver" />
       <module name="jit-first-delivery" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;D:\javafx-sdk-17.0.1\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +165,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestGC" />
+    <configuration name="LoanCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.LoanCalculator" />
       <module name="jit-first-delivery" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;D:\javafx-sdk-17.0.1\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,25 +179,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMerge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestMerge" />
+    <configuration name="Registration" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.Registration" />
       <module name="jit-first-delivery" />
+      <option name="VM_PARAMETERS" value="--module-path=&quot;D:\javafx-sdk-17.0.1\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestReset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestReset" />
-      <module name="jit-first-delivery" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,8 +206,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStatus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.TestStatus" />
+    <configuration name="dataInitiation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Initiation.dataInitiation" />
+      <module name="jit-first-delivery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Initiation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testGenderArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testGenderArrayList" />
+      <module name="jit-first-delivery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testYear" />
       <module name="jit-first-delivery" />
       <extension name="coverage">
         <pattern>
@@ -173,19 +248,20 @@
     <list>
       <item itemvalue="Application.CLI" />
       <item itemvalue="Application.TestSeparator" />
-      <item itemvalue="Application.TestCommit" />
-      <item itemvalue="Application.TestReset" />
-      <item itemvalue="Application.TestMerge" />
-      <item itemvalue="Application.TestStatus" />
-      <item itemvalue="Application.TestGC" />
+      <item itemvalue="Application.Registration" />
+      <item itemvalue="Application.dataInitiation" />
+      <item itemvalue="Application.LoanCalculator" />
+      <item itemvalue="Application.Driver" />
+      <item itemvalue="Application.testYear" />
+      <item itemvalue="Application.testGenderArrayList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestReset" />
-        <item itemvalue="Application.TestGC" />
-        <item itemvalue="Application.TestStatus" />
-        <item itemvalue="Application.TestMerge" />
-        <item itemvalue="Application.TestCommit" />
+        <item itemvalue="Application.dataInitiation" />
+        <item itemvalue="Application.testGenderArrayList" />
+        <item itemvalue="Application.Driver" />
+        <item itemvalue="Application.testYear" />
+        <item itemvalue="Application.LoanCalculator" />
       </list>
     </recent_temporary>
   </component>
@@ -215,6 +291,16 @@
       <workItem from="1641373481092" duration="18188000" />
       <workItem from="1641397200805" duration="6291000" />
       <workItem from="1641403851424" duration="5820000" />
+      <workItem from="1641450367664" duration="21810000" />
+      <workItem from="1641731815782" duration="9252000" />
+      <workItem from="1641807761372" duration="38000" />
+      <workItem from="1641807832342" duration="17929000" />
+      <workItem from="1641900096484" duration="1258000" />
+      <workItem from="1641902551703" duration="588000" />
+      <workItem from="1642214503526" duration="48174000" />
+      <workItem from="1642422448127" duration="52775000" />
+      <workItem from="1642575407763" duration="857000" />
+      <workItem from="1642576300045" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="commit -m &quot;彻底优化并重构整合了求哈希值模块&quot;">
       <created>1639920020330</created>
@@ -498,20 +584,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestBranchCheckout.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/GUI/Registration.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestAdd.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/GUI/LoanCalculator.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestGC.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/GUI/Driver.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

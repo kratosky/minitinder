@@ -10,19 +10,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import matchOperation.Match;
 import register.Register;
-import user.uncheckedUser;
+import user.CheckedUser;
+import user.UncheckedUser;
 
-import java.util.Set;
-
-public class LoanCalculator extends Application
+public class Registration extends Application
 {
-  private Stage stage;
+  private Stage stage = new Stage();
   private TextField tfUserName = new TextField();
   private TextField tfPassword = new TextField();
   private Button btLogin = new Button("登录");
   private Button btRegister = new Button("注册");
+  private Button btModify = new Button("修改密码");
   private Label lblMessage = new Label("新用户请先注册后登录");
   
   @Override // Override the start method in the Application class
@@ -34,6 +33,16 @@ public class LoanCalculator extends Application
     primaryStage.setTitle("登录界面"); // Set title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
+  }
+
+  //当返回登录界面时调用此方法
+  public void display()
+  {
+    // Create a scene and place it in the stage
+    Scene scene = new Scene(initPane(), 400, 250);
+    stage.setTitle("登录界面"); // Set title
+    stage.setScene(scene); // Place the scene in the stage
+    stage.show(); // Display the stage
   }
 
 
@@ -49,6 +58,7 @@ public class LoanCalculator extends Application
     gridPane.add(tfPassword, 1, 1);
     gridPane.add(btLogin, 0, 2);
     gridPane.add(btRegister, 1, 2);
+    gridPane.add(btModify, 2, 2);
 
 
     // Set properties for UI
@@ -56,7 +66,8 @@ public class LoanCalculator extends Application
     tfUserName.setAlignment(Pos.BOTTOM_LEFT);
     tfPassword.setAlignment(Pos.BOTTOM_LEFT);
     GridPane.setHalignment(btLogin, HPos.LEFT);
-    GridPane.setHalignment(btRegister,HPos.RIGHT);
+    GridPane.setHalignment(btRegister,HPos.CENTER);
+    GridPane.setHalignment(btModify,HPos.RIGHT);
 
 
     BorderPane borderPane = new BorderPane();
@@ -66,14 +77,61 @@ public class LoanCalculator extends Application
     // Process events
     btRegister.setOnAction(e -> register());
     btLogin.setOnAction(e -> login());
+    btModify.setOnAction(e-> {new ChangePassWord().display();stage.close();});
     return borderPane;
   }
 
 
   private void login()
   {
-    stage.close();
-    Registration.display();
+    // Get values from text fields
+    String username = tfUserName.getText();
+    String password = tfPassword.getText();
+    if(username.isBlank()||password.isBlank())
+    {
+      lblMessage.setText("用户名和密码不能为空！");
+      return;
+    }
+    try
+    {
+      //用户名被注册过显示注册过
+      if(Register.containsUser(username))
+      {
+        //无需判断用户是否是审查过的用户，利用多态性序列化取出原本的密码
+        String originalPassword = UncheckedUser.deserialize(username).getPassword();
+
+        //密码正确则登录成功
+        if(originalPassword.equals(password))
+        {
+          lblMessage.setText("登录成功!");
+          //此时判断用户是否上传过资料决定是否给出弹窗上传资料，还是进入用户主页
+          if(UncheckedUser.isUnchecked(username))
+          {
+            boolean close = UpdateReminder.display(username);
+            if(close){stage.close();}
+          }
+          else
+          {
+            new HomePage().display(username);
+            stage.close();
+          }
+
+        }
+        else
+        {
+          lblMessage.setText("密码错误，请重新输入!");
+        }
+      }
+      //没有注册过通知用户不存在
+      else
+      {
+        lblMessage.setText("该用户不存在，请先注册再登录!");
+      }
+    }
+    catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+    }
   }
   
   private void register()
@@ -97,7 +155,7 @@ public class LoanCalculator extends Application
       else
       {
         //创建未检查用户并序列化存储
-        uncheckedUser newUser = new uncheckedUser(username, password);
+        UncheckedUser newUser = new UncheckedUser(username, password);
         newUser.compressSerialize();
         Register.addUser(username);
         lblMessage.setText("已成功注册!");

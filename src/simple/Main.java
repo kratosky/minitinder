@@ -1,2 +1,14 @@
-package simple;public class Main {
+package simple;
+
+import java.awt.Frame;
+
+
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        Frame frame=new MyFrame();
+    }
+
 }

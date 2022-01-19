@@ -1,8 +1,6 @@
-package fileoperation;
+package file_operation;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 
 public class FileDeletion
 {

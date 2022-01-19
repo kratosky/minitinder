@@ -11,9 +11,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import register.Register;
-import user.uncheckedUser;
+import user.UncheckedUser;
 
-public class Registration
+public class Touse
 {
     private Stage stage;
     private TextField tfUserName = new TextField();
@@ -85,10 +85,39 @@ public class Registration
             else
             {
                 //创建未检查用户并序列化存储
-                uncheckedUser newUser = new uncheckedUser(username, password);
+                UncheckedUser newUser = new UncheckedUser(username, password);
                 newUser.compressSerialize();
                 Register.addUser(username);
                 lblMessage.setText("已成功注册");
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
+    private void login()
+    {
+        // Get values from text fields
+        String username = tfUserName.getText();
+        String password = tfPassword.getText();
+        try
+        {
+            //用户名被注册过显示注册过
+            if(Register.containsUser(username))
+            {
+                lblMessage.setText("该用户名已被注册过！请更换用户名");
+            }
+            //没有注册过则将newUser序列化，并加入userlist
+            else
+            {
+                //创建未检查用户并序列化存储
+                UncheckedUser newUser = new UncheckedUser(username, password);
+                newUser.compressSerialize();
+                Register.addUser(username);
+                lblMessage.setText("已成功登录");
             }
         }
         catch (Exception e)

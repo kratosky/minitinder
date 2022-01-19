@@ -1,12 +1,8 @@
-package fileoperation;
+package file_operation;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import gitobject.*;
-
 
 
 public class FileCreation

@@ -1,23 +1,23 @@
+
 package GUI;
-import javafx.geometry.HPos;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
+        import checkedUserManagement.CheckedUserManage;
+        import javafx.geometry.HPos;
+        import javafx.geometry.Pos;
+        import javafx.scene.Scene;
+        import javafx.scene.control.Button;
+        import javafx.scene.control.Label;
+        import javafx.scene.layout.GridPane;
+        import javafx.scene.layout.VBox;
+        import javafx.stage.Modality;
+        import javafx.stage.Stage;
 
-
-public class UpdateReminder
+public class DeregistrationAlert
 {
     private static boolean closeRegistration;
     /**
      * 展示提醒窗口
-     * @param userName
      */
-    public static boolean display(String userName)
+    public static boolean display(String username)
     {
 
         closeRegistration = false;
@@ -25,17 +25,18 @@ public class UpdateReminder
         Stage stage = new Stage();
         // 设置显示模式
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("上传提醒");
-        Label label = new Label("您还未上传匹配信息，是否现在上传？");
+        stage.setTitle("注销警告");
+        Label label = new Label("账号注销后所有信息将清空（资料，匹配资源与结果），是否确认注销账号？");
         // 创建控件
-        Button buttonYes = new Button("上传");
+        Button buttonYes = new Button("注销账号");
         buttonYes.setOnMouseClicked(event -> {
-            new UpdateInformation().display(userName);
+            CheckedUserManage.deleteCheckedUser(username);
+            new Registration().display();
             closeRegistration = true;
             stage.close();
         });
 
-        Button buttonNo = new Button("取消");
+        Button buttonNo = new Button("再想想");
         buttonNo.setOnMouseClicked(event -> {
             stage.close();
         });
@@ -57,7 +58,7 @@ public class UpdateReminder
 
 
         // 创建场景
-        Scene scene = new Scene(gridPane, 300, 150);
+        Scene scene = new Scene(gridPane, 550, 150);
 
         // 显示舞台
         stage.setScene(scene);
@@ -66,5 +67,3 @@ public class UpdateReminder
         return closeRegistration;
     }
 }
-
-
