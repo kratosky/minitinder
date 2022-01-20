@@ -132,7 +132,7 @@ public class HomePage
         rightGridPane.setHgap(5);
         rightGridPane.setVgap(5);
         rightGridPane.add(lblImageTitle, 0, 0);
-        rightGridPane.add(new Label("剩余选择次数:"), 0, 1);
+        rightGridPane.add(new Label("剩余浏览用户个数:"), 0, 1);
         rightGridPane.add(lblOpportunities, 1, 1);
         rightGridPane.add(new Label("剩余喜欢次数:"), 0, 2);
         rightGridPane.add(lblLikeOnes, 1, 2);
@@ -149,12 +149,20 @@ public class HomePage
         paneForButtons.setAlignment(Pos.CENTER);
 
         btRecharge.setOnAction(e->{if(Buy.display(username)){updateResource(username);}});
-        btUpdate.setOnAction(e->{new UpdateInformation().display(username);stage.close();});
+        btUpdate.setOnAction(e->{new UploadInformation().display(username);stage.close();});
         btQuit.setOnAction(e->{new Registration().display();stage.close();});
         btDeregistration.setOnAction(e->
         {
             boolean close = DeregistrationAlert.display(username);
             if(close){stage.close();}
+        });
+        btStart.setOnAction(e->
+        {
+            //如果成功开始匹配选择，则关闭个人页面
+            if(SelectionSetting.display(username,Integer.parseInt(lblOpportunities.getText()),Integer.parseInt(lblLikeOnes.getText())))
+            {
+                stage.close();
+            }
         });
 
 

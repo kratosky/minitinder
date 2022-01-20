@@ -8,18 +8,43 @@ import user.Gender;
 
 public class Selection
 {
+    private String userName;
     private int chances;
+    private int maxLikes;
     private Condition conditon;
 
-    public Selection(int chances, Condition conditon )
+    public Selection(String userName,int chances, int maxLikes, Condition conditon )
     {
+        this.userName = userName;
         this.chances = chances;
+        this.maxLikes = maxLikes;
         this.conditon = conditon;
     }
 
 
+    public String getUserName() {
+        return userName;
+    }
 
+    public int getChances() {
+        return chances;
+    }
 
+    public int getMaxLikes() {
+        return maxLikes;
+    }
+
+    public Condition getConditon() {
+        return conditon;
+    }
+
+    /**
+     * 从给定0-totalSize之中随机抽取randomNumbers个不同的下标
+     * @param totalSize
+     * @param randomNumbers
+     * @return
+     * @throws IllegalArgumentException
+     */
     private static Set<Integer> getRandomIndices(int totalSize, int randomNumbers) throws IllegalArgumentException
     {
         if(totalSize < randomNumbers)
@@ -78,50 +103,3 @@ public class Selection
 
 }
 
-class Condition
-{
-    private Set<Gender> genderPreference;
-    private int minAge;
-    private int maxAge;
-
-    public Condition(Set<Gender> genderPreference, int minAge, int maxAge)
-    {
-        this.genderPreference = genderPreference;
-        this.minAge = minAge;
-        this.maxAge = maxAge;
-    }
-
-    /**
-     * 判断传入的性别与出生年份符合筛选要求
-     * @param gender
-     * @param birthYear
-     * @return
-     */
-    public boolean meetCondition(Gender gender,int birthYear)
-    {
-        Calendar cal = Calendar.getInstance();
-        int currentYear = cal.get(Calendar.YEAR);
-        int age = currentYear - birthYear +1;
-        if(this.genderPreference.contains(gender)&&(age>=minAge)&&(age<=maxAge))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
-
-    /**
-     * 重载meetCondition，判断传入的username判断是否符合条件
-     * @return
-     */
-    public boolean meetCondition(String username)throws Exception
-    {
-        CheckedUser user = CheckedUser.deserialize(username+".checked");
-        return(meetCondition(user.getGender(),user.getBirthYear()));
-    }
-
-
-}

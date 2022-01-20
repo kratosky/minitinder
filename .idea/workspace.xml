@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;线上探探&quot;">
-      <change afterPath="$PROJECT_DIR$/data/Revenue/Detailed_Revenue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/financial_management/Price.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/financial_management/Revenue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/PaymentConfirmation.java" afterDir="false" />
+    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;增加了购买匹配资源功能&quot;">
+      <change afterPath="$PROJECT_DIR$/data/users/1.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/12.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/SelectionSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/Stub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/match_operation/Condition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/matchRecord/liked" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/liked" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/matchRecord/matched" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/matched" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/matchRecord/passed" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/passed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/1.unchecked" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/ChangePassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ChangePassWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/DeregistrationAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DeregistrationAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Recharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Buy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Touse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/UpdateInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UpdateInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/UpdateReminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UpdateReminder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/caculateLoan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/caculateLoan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/changeScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/changeScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Initiation/dataInitiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/initiation/Initiation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkedUserManagement/CheckedUserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checked_user_management/CheckedUserManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file_operation/FileCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_operation/FileCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file_operation/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_operation/FileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/financial_management/SuccessMatch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matchOperation/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Match.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/matchOperation/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/PaymentConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PaymentConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/UpdateInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/UpdateReminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadReminder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/match_operation/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/match_operation/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Selection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +194,7 @@
       <item itemvalue="Application.CLI" />
       <item itemvalue="Application.TestSeparator" />
       <item itemvalue="Application.Registration" />
-      <item itemvalue="Application.dataInitiation" />
+      <item itemvalue="Application.Initiation" />
       <item itemvalue="Application.LoanCalculator" />
       <item itemvalue="Application.Driver" />
       <item itemvalue="Application.testYear" />
@@ -216,7 +203,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Driver" />
-        <item itemvalue="Application.dataInitiation" />
         <item itemvalue="Application.testGenderArrayList" />
         <item itemvalue="Application.testYear" />
         <item itemvalue="Application.LoanCalculator" />
@@ -258,7 +244,8 @@
       <workItem from="1642214503526" duration="48174000" />
       <workItem from="1642422448127" duration="52775000" />
       <workItem from="1642575407763" duration="857000" />
-      <workItem from="1642576300045" duration="25222000" />
+      <workItem from="1642576300045" duration="25710000" />
+      <workItem from="1642654575421" duration="20915000" />
     </task>
     <task id="LOCAL-00001" summary="commit -m &quot;彻底优化并重构整合了求哈希值模块&quot;">
       <created>1639920020330</created>
@@ -498,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642579208103</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="commit -m &quot;增加了购买匹配资源功能&quot;">
+      <created>1642616664019</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1642616664019</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +512,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit -m &quot;彻底改造Tree类型，将其中Arraylist变成TreeMap，并修改了与之相关的方法，大大提升了objects空间存储效率&quot;" />
     <MESSAGE value="commit -m &quot;进一步优化了生成treeMap的方法&quot;" />
     <MESSAGE value="commit -m &quot;添加HEAD指针以及分支名之前保存&quot;" />
     <MESSAGE value="commit -m &quot;实现了分支，头指针，并以此修改了commit getParent方法 以及初始化功能&quot;" />
@@ -543,7 +536,8 @@
     <MESSAGE value="commit -m &quot;增加并测试了功能git status&quot;" />
     <MESSAGE value="commit -m &quot;增加了add rm reset commit 等测试类，同时改进了reset方法&quot;" />
     <MESSAGE value="commit -m &quot;线上探探&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;线上探探&quot;" />
+    <MESSAGE value="commit -m &quot;增加了购买匹配资源功能&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;增加了购买匹配资源功能&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

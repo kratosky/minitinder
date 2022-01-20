@@ -9,33 +9,38 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import match_operation.Selection;
 import user.CheckedUser;
 
-public class PaymentConfirmation
+public class SelectionConfirmation
 {
-    private static boolean paymentComplete;
+    private static boolean selectionConfirmed;
     private static Stage stage = new Stage();
     /**
      * 展示提醒窗口
-     * @param userName
      */
-    public static boolean display(String userName,double payment,int chances, int likes)
+    public static boolean display(Selection selection)
     {
 
-        paymentComplete = false;
+        selectionConfirmed = false;
         // 创建舞台
 
         // 设置显示模式
         stage.initModality(Modality.APPLICATION_MODAL);
-        stage.setTitle("付款确认");
-        String payString = String.format("¥%.2f", payment);
-        Label label = new Label("本次购买总共需要支付"+payString+"，请确认支付！");
+        stage.setTitle("匹配开始确认");
+        Label label = new Label("本次匹配选择总共浏览"+
+                String.valueOf(selection.getChances()) + "位用户，当前剩余可喜欢用户次数为："+
+                String.valueOf(selection.getMaxLikes()) + "次，年龄范围为 " +
+                String.valueOf(selection.getConditon().getMinAge()) + " 岁到 " +
+                String.valueOf(selection.getConditon().getMaxAge()) + " 岁, 性别为：" +
+                selection.getConditon().getGenderDescription() +"。请确定是否开始匹配？"
+        );
         // 创建控件
-        Button buttonYes = new Button("支付");
+        Button buttonYes = new Button("开始匹配");
         buttonYes.setOnMouseClicked(event ->
         {
-            completePurchase(userName,payment,chances, likes);
-            paymentComplete = true;
+            Stub.display();
+            selectionConfirmed = true;
             stage.close();
         });
 
@@ -65,32 +70,9 @@ public class PaymentConfirmation
 
         // 显示舞台
         stage.setScene(scene);
-        //stage.show();
         stage.showAndWait();  // 等待窗体关闭才继续
-        return paymentComplete;
+        return selectionConfirmed;
     }
 
-    /**
-     * 确认购买，一方面系统记账，一方面用户资源数增加
-     */
-    private static void completePurchase(String userName,double payment,int chances, int likes)
-    {
-        try
-        {
-            //记账
-            Revenue.addPayment(userName, payment);
-            //资源数增加
-            CheckedUser user = CheckedUser.deserialize(userName);
-            user.changeLikeOnes(likes);
-            user.changeOpportunities(chances);
-            user.compressSerialize();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-
-
-    }
 
 }

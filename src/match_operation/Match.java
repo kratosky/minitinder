@@ -178,6 +178,7 @@ public abstract class Match
             likedMap.put(user,new HashSet<String>());
             setLikedMap(likedMap);
             passedMap.put(user,new HashSet<String>());
+            passedMap.get(user).add(user);//passedMap把自己写入，避免匹配到自己
             setPassedMap(passedMap);
             matchedMap.put(user,new HashSet<String>());
             setMatchedMap(matchedMap);
@@ -301,6 +302,20 @@ public abstract class Match
         matchedMap.get(selector).remove(selectee);
         matchedMap.get(selectee).remove(selector);
         setMatchedMap(matchedMap);
+    }
+
+
+    /**
+     * 获取给定用户当前的最大可浏览系统资源
+     * @param user
+     * @return
+     * @throws Exception
+     */
+    public static int getMaxChances(String user)throws Exception
+    {
+        Map<String,Set<String>> passedMap = getPassedMap();
+        int maxChances = passedMap.size() - passedMap.get(user).size();
+        return maxChances;
     }
 
 

@@ -23,7 +23,7 @@ import checked_user_management.CheckedUserManage;
 
 import static user.Gender.*;
 
-public class UpdateInformation
+public class UploadInformation
 {
     private final String[] genderDescr = {"男", "女", "其他"};
     private final Gender[] genderOptions = {Male, Female, Other};

@@ -9,7 +9,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
-public class UpdateReminder
+public class UploadReminder
 {
     private static boolean closeRegistration;
     /**
@@ -29,7 +29,7 @@ public class UpdateReminder
         // 创建控件
         Button buttonYes = new Button("上传");
         buttonYes.setOnMouseClicked(event -> {
-            new UpdateInformation().display(userName);
+            new UploadInformation().display(userName);
             closeRegistration = true;
             stage.close();
         });
