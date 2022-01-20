@@ -26,7 +26,7 @@ public class PaymentConfirmation
         // 创建舞台
 
         // 设置显示模式
-        stage.initModality(Modality.APPLICATION_MODAL);
+        //stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("付款确认");
         String payString = String.format("¥%.2f", payment);
         Label label = new Label("本次购买总共需要支付"+payString+"，请确认支付！");

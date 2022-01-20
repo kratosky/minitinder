@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;增加了购买匹配资源功能&quot;">
-      <change afterPath="$PROJECT_DIR$/data/users/1.checked" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/users/12.checked" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/SelectionSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/Stub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/match_operation/Condition.java" afterDir="false" />
+    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;增加了设定匹配条件功能&quot;">
+      <change afterPath="$PROJECT_DIR$/src/test/testRandomSetSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/PaymentConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PaymentConfirmation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/UpdateInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/UpdateReminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadReminder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/match_operation/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/1.checked" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/1.checked" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SelectionSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SelectionSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/match_operation/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Condition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/match_operation/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Selection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/MyFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simple/MyPanel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,19 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Initiation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="initiation.Initiation" />
-      <module name="jit-first-delivery" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="initiation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoanCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.LoanCalculator" />
       <module name="jit-first-delivery" />
@@ -177,6 +159,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testRandomSetSelection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testRandomSetSelection" />
+      <module name="jit-first-delivery" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.testYear" />
       <module name="jit-first-delivery" />
@@ -194,14 +189,15 @@
       <item itemvalue="Application.CLI" />
       <item itemvalue="Application.TestSeparator" />
       <item itemvalue="Application.Registration" />
-      <item itemvalue="Application.Initiation" />
       <item itemvalue="Application.LoanCalculator" />
       <item itemvalue="Application.Driver" />
       <item itemvalue="Application.testYear" />
       <item itemvalue="Application.testGenderArrayList" />
+      <item itemvalue="Application.testRandomSetSelection" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testRandomSetSelection" />
         <item itemvalue="Application.Driver" />
         <item itemvalue="Application.testGenderArrayList" />
         <item itemvalue="Application.testYear" />
@@ -245,7 +241,7 @@
       <workItem from="1642422448127" duration="52775000" />
       <workItem from="1642575407763" duration="857000" />
       <workItem from="1642576300045" duration="25710000" />
-      <workItem from="1642654575421" duration="20915000" />
+      <workItem from="1642654575421" duration="31518000" />
     </task>
     <task id="LOCAL-00001" summary="commit -m &quot;彻底优化并重构整合了求哈希值模块&quot;">
       <created>1639920020330</created>
@@ -492,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642616664019</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="commit -m &quot;增加了设定匹配条件功能&quot;">
+      <created>1642699640468</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1642699640468</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +515,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit -m &quot;进一步优化了生成treeMap的方法&quot;" />
     <MESSAGE value="commit -m &quot;添加HEAD指针以及分支名之前保存&quot;" />
     <MESSAGE value="commit -m &quot;实现了分支，头指针，并以此修改了commit getParent方法 以及初始化功能&quot;" />
     <MESSAGE value="commit -m &quot;给Commit增加了访问上一个Commit方法&quot;" />
@@ -537,7 +539,8 @@
     <MESSAGE value="commit -m &quot;增加了add rm reset commit 等测试类，同时改进了reset方法&quot;" />
     <MESSAGE value="commit -m &quot;线上探探&quot;" />
     <MESSAGE value="commit -m &quot;增加了购买匹配资源功能&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;增加了购买匹配资源功能&quot;" />
+    <MESSAGE value="commit -m &quot;增加了设定匹配条件功能&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;增加了设定匹配条件功能&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,5 @@
 package gui;
 
-import financial_management.Revenue;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -10,11 +9,13 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import match_operation.Selection;
-import user.CheckedUser;
+
+import java.util.ArrayList;
 
 public class SelectionConfirmation
 {
     private static boolean selectionConfirmed;
+    private static  Label label = new Label();
     private static Stage stage = new Stage();
     /**
      * 展示提醒窗口
@@ -26,15 +27,30 @@ public class SelectionConfirmation
         // 创建舞台
 
         // 设置显示模式
-        stage.initModality(Modality.APPLICATION_MODAL);
+        //stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("匹配开始确认");
-        Label label = new Label("本次匹配选择总共浏览"+
-                String.valueOf(selection.getChances()) + "位用户，当前剩余可喜欢用户次数为："+
-                String.valueOf(selection.getMaxLikes()) + "次，年龄范围为 " +
-                String.valueOf(selection.getConditon().getMinAge()) + " 岁到 " +
-                String.valueOf(selection.getConditon().getMaxAge()) + " 岁, 性别为：" +
-                selection.getConditon().getGenderDescription() +"。请确定是否开始匹配？"
-        );
+        try
+        {
+            ArrayList<String> userToSelect = selection.getUserToSelect();
+            if(!userToSelect.isEmpty())
+            {
+                label.setText("根据筛选条件，本次匹配实际可浏览" +
+                        String.valueOf(userToSelect.size()) + "位用户，当前剩余可喜欢用户次数为：" +
+                        String.valueOf(selection.getMaxLikes()) + "次，年龄范围为 " +
+                        String.valueOf(selection.getConditon().getMinAge()) + " 岁到 " +
+                        String.valueOf(selection.getConditon().getMaxAge()) + " 岁, 性别为：" +
+                        selection.getConditon().getGenderDescription() + "。请确定是否开始匹配？"
+                );
+            }
+            else{return failReport();}
+        }
+        catch(Exception e)
+        {
+            System.out.println("读取map时出现问题，请维修系统！");
+            stage.close();
+            return false;
+        }
+
         // 创建控件
         Button buttonYes = new Button("开始匹配");
         buttonYes.setOnMouseClicked(event ->
@@ -72,6 +88,38 @@ public class SelectionConfirmation
         stage.setScene(scene);
         stage.showAndWait();  // 等待窗体关闭才继续
         return selectionConfirmed;
+    }
+
+    private static boolean failReport()
+    {
+        label.setText("目前找不到符合您筛选条件的用户，请重新选择筛选条件");
+        Button buttonYes = new Button("确定");
+        buttonYes.setOnMouseClicked(event ->
+        {
+            stage.close();
+        });
+
+        // Create UI
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(5);
+        gridPane.setVgap(5);
+        gridPane.add(label, 0, 0);
+        gridPane.add(buttonYes, 0, 1);
+        // 创建控件
+
+
+        // Set properties for UI
+        gridPane.setAlignment(Pos.CENTER);
+        GridPane.setHalignment(label, HPos.CENTER);
+        GridPane.setHalignment(buttonYes, HPos.CENTER);
+
+        // 创建场景
+        Scene scene = new Scene(gridPane, 300, 150);
+
+        // 显示舞台
+        stage.setScene(scene);
+        stage.showAndWait();  // 等待窗体关闭才继续
+        return false;
     }
 
 

@@ -70,9 +70,9 @@ public class Condition
      * 重载meetCondition，判断传入的username判断是否符合条件
      * @return
      */
-    public boolean meetCondition(String username)throws Exception
+    public boolean meetCondition(String username)
     {
-        CheckedUser user = CheckedUser.deserialize(username+".checked");
+        CheckedUser user = CheckedUser.deserialize(username);
         return(meetCondition(user.getGender(),user.getBirthYear()));
     }
 

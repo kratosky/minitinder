@@ -53,7 +53,7 @@ public class SelectionSetting
         gridPane.add(tfMaxAge, 1, 1);
         gridPane.add(new Label("可接受性别:"), 0, 2);
         gridPane.add(setGenderBox(), 1, 2);
-        gridPane.add(new Label("本次浏览用户数:"), 0, 4);
+        gridPane.add(new Label("本次期望浏览用户数:"), 0, 4);
         gridPane.add(tfChances, 1, 4);
         gridPane.add(btStart, 0, 8);
         gridPane.add(btBack, 1, 8);
