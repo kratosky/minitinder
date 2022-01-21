@@ -42,7 +42,7 @@ public class SelectionSetting
     {
         startSelection = false;
 
-
+        clear();
         // Create UI
         GridPane gridPane = new GridPane();
         gridPane.setHgap(5);
@@ -71,6 +71,7 @@ public class SelectionSetting
             if(tryStartSelection(username,maxChances,maxLikes))
             {
                 startSelection = true;
+                stage.close();
             }
         });
         btBack.setOnAction(e -> stage.close());

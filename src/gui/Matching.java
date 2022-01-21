@@ -82,8 +82,8 @@ public class Matching
         this.selectionRecord = initSelectionRecord(userToSelect);
 
 
-        //将用户资料完全展现
-        setUserProperty(userName);
+
+
 
         GridPane leftGridPane= setupLeftGridPane();
         GridPane rightGridPane= setupRightGridPane();
@@ -106,13 +106,14 @@ public class Matching
         totalGridPane.add(vBox,0,2);
         totalGridPane.setAlignment(Pos.CENTER);
 
-
+        updatePage(0);//展示第一个用户
 
 
         // Create a scene and place it in the stage
-        Scene scene = new Scene(totalGridPane, 1500, 400);
-        stage.setTitle("个人主页"); // Set title
+        Scene scene = new Scene(totalGridPane, 1500, 700);
+        stage.setTitle("用户"+selector+"的匹配界面"); // Set title
         stage.setScene(scene); // Place the scene in the stage
+        stage.setMaximized(true);
         stage.show(); // Display the stage
     }
 
@@ -125,6 +126,7 @@ public class Matching
         cboSelectees.setValue(selecteeList.get(0));
         cboSelectees.setPrefWidth(500);
         topHBox.getChildren().addAll(new Label("选择用户："),cboSelectees,new Label("剩余喜欢次数："),lblLeftLikes);
+        topHBox.setSpacing(10.0);
         return topHBox;
     }
 
@@ -188,9 +190,21 @@ public class Matching
 
         chkLike.setOnAction(e->
                 {
-                    likesChangeBy(-1);
-                    setCheckBox(1);
-                    selectionRecord.put(lblcurrentSelectee.getText(),1);
+                    if(leftLikes==0)
+                    {
+                        lblMessage.setText("当前已经没有剩余的喜欢次数！");
+                    }
+                    else
+                    {
+                        //避免重复点击喜欢，剩余喜欢数减少
+                        if(selectionRecord.get(lblcurrentSelectee.getText())!=1)
+                        {
+                            likesChangeBy(-1);
+                            setCheckBox(1);
+                            selectionRecord.put(lblcurrentSelectee.getText(),1);
+                        }
+
+                    }
 
                 });
         chkDislike.setOnAction(e->

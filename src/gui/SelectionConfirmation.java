@@ -18,7 +18,8 @@ public class SelectionConfirmation
     private  Label label = new Label();
     private Stage stage = new Stage();
     private ArrayList<String> userToSelect = new ArrayList<>();
-
+    private Button buttonYes = new Button("开始匹配");
+    private Button buttonNo = new Button("取消");
     /**
      * 展示提醒窗口
      */
@@ -53,16 +54,21 @@ public class SelectionConfirmation
             return false;
         }
 
-        // 创建控件
-        Button buttonYes = new Button("开始匹配");
+
         buttonYes.setOnMouseClicked(event ->
         {
-            Stub.display();
+            try {
+                new Matching().display(selection.getUserName(), selection.getMaxLikes(), selection.getUserToSelect());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             selectionConfirmed = true;
             stage.close();
         });
 
-        Button buttonNo = new Button("取消");
+
+
+
         buttonNo.setOnMouseClicked(event -> {
             stage.close();
         });
@@ -84,7 +90,7 @@ public class SelectionConfirmation
 
 
         // 创建场景
-        Scene scene = new Scene(gridPane, 300, 150);
+        Scene scene = new Scene(gridPane, 1000, 150);
 
         // 显示舞台
         stage.setScene(scene);
@@ -116,7 +122,8 @@ public class SelectionConfirmation
         GridPane.setHalignment(buttonYes, HPos.CENTER);
 
         // 创建场景
-        Scene scene = new Scene(gridPane, 300, 150);
+        Scene scene = new Scene(gridPane, 500, 150);
+
 
         // 显示舞台
         stage.setScene(scene);

@@ -72,9 +72,10 @@ public class UploadInformation
         }
 
         // Create a scene and place it in the stage
-        Scene scene = new Scene(totalGridPane, 1500, 400);
+        Scene scene = new Scene(totalGridPane, 1500, 700);
         stage.setTitle("上传资料"); // Set title
         stage.setScene(scene); // Place the scene in the stage
+        stage.setMaximized(true);
         stage.show(); // Display the stage
     }
 
