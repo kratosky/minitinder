@@ -14,13 +14,15 @@ import java.util.ArrayList;
 
 public class SelectionConfirmation
 {
-    private static boolean selectionConfirmed;
-    private static  Label label = new Label();
-    private static Stage stage = new Stage();
+    private boolean selectionConfirmed;
+    private  Label label = new Label();
+    private Stage stage = new Stage();
+    private ArrayList<String> userToSelect = new ArrayList<>();
+
     /**
      * 展示提醒窗口
      */
-    public static boolean display(Selection selection)
+    public boolean display(Selection selection)
     {
 
         selectionConfirmed = false;
@@ -90,7 +92,7 @@ public class SelectionConfirmation
         return selectionConfirmed;
     }
 
-    private static boolean failReport()
+    private boolean failReport()
     {
         label.setText("目前找不到符合您筛选条件的用户，请重新选择筛选条件");
         Button buttonYes = new Button("确定");

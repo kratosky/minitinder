@@ -113,7 +113,7 @@ public class Registration extends Application
           //此时判断用户是否上传过资料决定是否给出弹窗上传资料，还是进入用户主页
           if(UncheckedUser.isUnchecked(username))
           {
-            boolean close = UploadReminder.display(username);
+            boolean close = new UploadReminder().display(username);
             if(close){stage.close();}
           }
           else

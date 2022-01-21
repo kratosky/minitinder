@@ -17,7 +17,7 @@ public class Stub
         HBox paneForButtons = new HBox(20);
         paneForButtons.getChildren().addAll(btLeft);
         paneForButtons.setAlignment(Pos.CENTER);
-        btLeft.setOnAction(e->{Buy.clearAndClose();Buy.display("haha");});
+        btLeft.setOnAction(e->{new Buy().display("haha");});
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(paneForButtons, 500, 300);

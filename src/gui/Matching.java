@@ -12,11 +12,13 @@ import javafx.stage.Stage;
 import user.CheckedUser;
 import user.Gender;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import static user.Gender.*;
+import static user.Gender.Male;
 
-public class HomePage
+public class Matching
 {
     private final String[] genderDescr = {"男", "女", "其他"};
     private final Gender[] genderOptions = {Male, Female, Other};
@@ -31,7 +33,7 @@ public class HomePage
     private Label lblOpportunities = new Label();
     private Label lblLikeOnes = new Label();
     private TextArea taIntro = new TextArea();
-    private Label lblMessage = new Label("成功进入个人主页！");
+    private Label lblMessage = new Label("请对每一位选择喜欢，不喜欢，或不确定，完成匹配后点击提交！");
     private Button btUpdate = new Button("更新资料");
     private Button btRecharge = new Button("充值");
     private Button btList = new Button("已匹配用户");
@@ -41,10 +43,15 @@ public class HomePage
 
     private Stage stage = new Stage();
 
+    private int currentIndex = 0;
+    private CheckBox chkMale = new CheckBox("Male");
+    private CheckBox chkFemale = new CheckBox("Female");
+    private CheckBox chkOther = new CheckBox("Other");
 
 
 
-    public void display(String username)
+
+    public void display(String username, ArrayList<String> userToSelect)
     {
         //将用户资料完全展现
         setUserProperty(username);
@@ -173,7 +180,13 @@ public class HomePage
         return vBox;
     }
 
-
+    /** Set display information on the description pane
+    public void setDisplay(int index) {
+        descriptionPane.setTitle(flagTitles[index]);
+        descriptionPane.setImageView(flagImage[index]);
+        descriptionPane.setDescription(flagDescription[index]);
+    }
+     */
 
 
     private void setUserProperty(String name)
@@ -199,5 +212,7 @@ public class HomePage
         lblLikeOnes.setText(String.valueOf(user.getLikeOnes()));
     }
 
-}
 
+
+
+}

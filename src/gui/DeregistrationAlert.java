@@ -13,11 +13,11 @@ import javafx.stage.Stage;
 
 public class DeregistrationAlert
 {
-    private static boolean closeRegistration;
+    private boolean closeRegistration;
     /**
      * 展示提醒窗口
      */
-    public static boolean display(String username)
+    public boolean display(String username)
     {
 
         closeRegistration = false;

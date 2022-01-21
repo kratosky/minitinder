@@ -11,12 +11,12 @@ import javafx.stage.Stage;
 
 public class UploadReminder
 {
-    private static boolean closeRegistration;
+    private boolean closeRegistration;
     /**
      * 展示提醒窗口
      * @param userName
      */
-    public static boolean display(String userName)
+    public boolean display(String userName)
     {
 
         closeRegistration = false;

@@ -39,6 +39,10 @@ public class Selection
         return conditon;
     }
 
+    public int getActualChances() {
+        return actualChances;
+    }
+
     /**
      * 从给定0-totalSize之中随机抽取randomNumbers个不同的下标
      * @param totalSize

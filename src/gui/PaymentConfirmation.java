@@ -13,13 +13,13 @@ import user.CheckedUser;
 
 public class PaymentConfirmation
 {
-    private static boolean paymentComplete;
-    private static Stage stage = new Stage();
+    private boolean paymentComplete;
+    private Stage stage = new Stage();
     /**
      * 展示提醒窗口
      * @param userName
      */
-    public static boolean display(String userName,double payment,int chances, int likes)
+    public boolean display(String userName,double payment,int chances, int likes)
     {
 
         paymentComplete = false;
@@ -73,7 +73,7 @@ public class PaymentConfirmation
     /**
      * 确认购买，一方面系统记账，一方面用户资源数增加
      */
-    private static void completePurchase(String userName,double payment,int chances, int likes)
+    private void completePurchase(String userName,double payment,int chances, int likes)
     {
         try
         {

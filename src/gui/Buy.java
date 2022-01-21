@@ -13,16 +13,16 @@ import financial_management.Price;
 
 public class Buy
 {
-    private static TextField tfNumberOfOpportunities = new TextField();
-    private static TextField tfNumberOfLikes = new TextField();
-    private static TextField tfTotalPayment = new TextField();
-    private static Button btCalculate = new Button("计算总价");
-    private static Button btPay = new Button("支付");
-    private static Label lblMessage = new Label("请分别输入要购买的查看次数与喜欢次数！");
-    private static Stage stage = new Stage();
-    private static boolean haveBuy;
+    private TextField tfNumberOfOpportunities = new TextField();
+    private TextField tfNumberOfLikes = new TextField();
+    private TextField tfTotalPayment = new TextField();
+    private Button btCalculate = new Button("计算总价");
+    private Button btPay = new Button("支付");
+    private Label lblMessage = new Label("请分别输入要购买的查看次数与喜欢次数！");
+    private Stage stage = new Stage();
+    private boolean haveBuy;
 
-    public static boolean display(String username)
+    public  boolean display(String username)
     {
         haveBuy = false;
 
@@ -69,7 +69,7 @@ public class Buy
     /**
      * 重复点击时，清空并关掉上一个
      */
-    public static void clearAndClose()
+    public void clearAndClose()
     {
         clear();
         stage.close();
@@ -78,7 +78,7 @@ public class Buy
     /**
      * 完成支付时，清空
      */
-    public static void clear()
+    public void clear()
     {
         tfNumberOfOpportunities.setText("");
         tfNumberOfLikes.setText("");
@@ -90,15 +90,15 @@ public class Buy
     /**
      * 支付
      */
-    private static void pay(String username, String chances, String likes)
+    private void pay(String username, String chances, String likes)
     {
         //计算成功，则进行支付
         if(tryCalculatePayment())
         {
-            boolean completePurchase = PaymentConfirmation.display(username,calculatePayment(),Integer.parseInt(chances),Integer.parseInt(likes));
+            boolean completePurchase = new PaymentConfirmation().display(username,calculatePayment(),Integer.parseInt(chances),Integer.parseInt(likes));
             if(completePurchase)
             {
-                Buy.clear();
+                this.clear();
                 lblMessage.setText("支付成功，购买的资源已增加到账户！");
                 haveBuy = true;
             }
@@ -110,7 +110,7 @@ public class Buy
     /**
      * 尝试计算并显示结果，返回是否成功
      */
-    private static boolean tryCalculatePayment()
+    private boolean tryCalculatePayment()
     {
         //先判断
         if(isValidInput())
@@ -129,7 +129,7 @@ public class Buy
      * 只在判定输入合法后使用使用，获得payment
      * @return
      */
-    private static double calculatePayment()
+    private double calculatePayment()
     {
         // Get values from text fields
         int numberOfOpportunities = Integer.parseInt(tfNumberOfOpportunities.getText());
@@ -143,7 +143,7 @@ public class Buy
 
 
 
-    private static boolean isValidInput()
+    private boolean isValidInput()
     {
         boolean result = true;
         lblMessage.setText("");
@@ -153,7 +153,7 @@ public class Buy
     }
 
     //用正则表达式判断字符串为非负整数
-    private static boolean isInt(String toCheck)
+    private boolean isInt(String toCheck)
     {
         return toCheck.matches("[\\d]+");
     }

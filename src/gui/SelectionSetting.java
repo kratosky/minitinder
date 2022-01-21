@@ -159,10 +159,10 @@ public class SelectionSetting
         {
             Condition condition = new Condition(getGenderSelection(),Integer.parseInt(tfMinAge.getText()),Integer.parseInt(tfMaxAge.getText()));
             Selection selection = new Selection(username,Integer.parseInt(tfChances.getText()),maxLikes,condition);
-            boolean confirmSelect = SelectionConfirmation.display(selection);
+            boolean confirmSelect = new SelectionConfirmation().display(selection);
             if(confirmSelect)
             {
-                Buy.clear();
+                SelectionSetting.clear();
                 return true;
             }
         }
