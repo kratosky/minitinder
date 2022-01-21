@@ -30,7 +30,7 @@ public class Driver extends Application
             SelectionSetting.clearAndClose();
             String[] userlist ={"12","123"};
             ArrayList<String> userToSelect = new ArrayList<String>(Arrays.asList(userlist));
-            new Matching().display("1",userToSelect);
+            new Matching().display("1",3,userToSelect);
         });
 
         // Create a scene and place it in the stage

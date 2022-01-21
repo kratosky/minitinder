@@ -3,6 +3,7 @@ package user;
 import serialization.ZipSerial;
 
 import java.io.File;
+import java.util.Calendar;
 
 public class CheckedUser extends UncheckedUser
 {
@@ -45,6 +46,15 @@ public class CheckedUser extends UncheckedUser
     }
 
     public int getLikeOnes() { return likeOnes;}
+
+    public int getAge()
+    {
+        Calendar cal = Calendar.getInstance();
+        int currentYear = cal.get(Calendar.YEAR);
+        int age = currentYear - birthYear +1;
+        return age;
+
+    }
 
     //对likeones资源进行变化，当为负数时，变化失败，返回false；否则成功变化，返回true
     public boolean changeLikeOnes(int change)

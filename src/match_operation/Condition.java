@@ -47,14 +47,11 @@ public class Condition
     /**
      * 判断传入的性别与出生年份符合筛选要求
      * @param gender
-     * @param birthYear
+     * @param age
      * @return
      */
-    public boolean meetCondition(Gender gender,int birthYear)
+    public boolean meetCondition(Gender gender,int age)
     {
-        Calendar cal = Calendar.getInstance();
-        int currentYear = cal.get(Calendar.YEAR);
-        int age = currentYear - birthYear +1;
         if(this.genderPreference.contains(gender)&&(age>=minAge)&&(age<=maxAge))
         {
             return true;
@@ -73,7 +70,7 @@ public class Condition
     public boolean meetCondition(String username)
     {
         CheckedUser user = CheckedUser.deserialize(username);
-        return(meetCondition(user.getGender(),user.getBirthYear()));
+        return(meetCondition(user.getGender(),user.getAge()));
     }
 
 
