@@ -30,7 +30,7 @@ public class SelectionConfirmation
         // 创建舞台
 
         // 设置显示模式
-        //stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setTitle("匹配开始确认");
         try
         {

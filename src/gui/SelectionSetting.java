@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import match_operation.Match;
 import match_operation.Selection;
@@ -43,6 +44,7 @@ public class SelectionSetting
         startSelection = false;
 
         clear();
+        //stage.initModality(Modality.APPLICATION_MODAL);
         // Create UI
         GridPane gridPane = new GridPane();
         gridPane.setHgap(5);

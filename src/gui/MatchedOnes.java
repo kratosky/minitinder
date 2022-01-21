@@ -217,6 +217,13 @@ public class MatchedOnes
             stage.close();
         });
 
+        btDelete.setOnAction(e->
+        {
+            if(new DeleteMatchAlert().display(owner,lblcurrentSelectee.getText()))
+            {
+                stage.close();
+            }
+        });
 
         VBox vBox =new VBox(30);
         vBox.getChildren().addAll(paneForButtons, lblMessage);

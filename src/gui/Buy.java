@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import financial_management.Price;
 
@@ -25,7 +26,7 @@ public class Buy
     public  boolean display(String username)
     {
         haveBuy = false;
-
+        stage.initModality(Modality.APPLICATION_MODAL);
         // Create UI
         GridPane gridPane = new GridPane();
         gridPane.setHgap(5);
