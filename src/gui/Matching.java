@@ -251,11 +251,10 @@ public class Matching
 
         btConfirm.setOnAction(e->
         {
-            /*
-            if(SelectionSetting.display(username,Integer.parseInt(lblOpportunities.getText()),Integer.parseInt(lblLikeOnes.getText())))
+            if(new MatchConfirmation().display(selector,selectionRecord))
             {
                 stage.close();
-            }*/
+            }
         });
 
 

@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;完成了匹配界面&quot;">
+    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;完善调试了之前的功能&quot;">
+      <change afterPath="$PROJECT_DIR$/src/gui/MatchConfirmation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/1.checked" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/1.checked" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/matchRecord/liked" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/liked" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/matchRecord/passed" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/passed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Matching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Matching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SelectionConfirmation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SelectionSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SelectionSetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/UploadInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/match_operation/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Match.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +240,7 @@
       <workItem from="1642575407763" duration="857000" />
       <workItem from="1642576300045" duration="25710000" />
       <workItem from="1642654575421" duration="31798000" />
-      <workItem from="1642743324975" duration="22284000" />
+      <workItem from="1642743324975" duration="26615000" />
     </task>
     <task id="LOCAL-00001" summary="commit -m &quot;彻底优化并重构整合了求哈希值模块&quot;">
       <created>1639920020330</created>
@@ -517,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642780016159</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="commit -m &quot;完善调试了之前的功能&quot;">
+      <created>1642785531246</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1642785531246</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit -m &quot;增加了把树还原到Index中的方法&quot;" />
     <MESSAGE value="commit -m &quot;进一步完善了 commit中的各种方法&quot;" />
     <MESSAGE value="commit -m &quot;增加了JitLog功能&quot;" />
     <MESSAGE value="commit -m &quot;JitLog功能进一步完善&quot;" />
@@ -562,7 +566,8 @@
     <MESSAGE value="commit -m &quot;完善了匹配后台功能&quot;" />
     <MESSAGE value="commit -m &quot;将gui统一改为非静态&quot;" />
     <MESSAGE value="commit -m &quot;完成了匹配界面&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;完成了匹配界面&quot;" />
+    <MESSAGE value="commit -m &quot;完善调试了之前的功能&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;完善调试了之前的功能&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

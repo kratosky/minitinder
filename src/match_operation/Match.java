@@ -233,6 +233,7 @@ public abstract class Match
      * 用户a喜欢了b
      * 若b喜欢了a（a的liked库去掉b，a加入b的passed，a,b加入彼此的matched）
      * 若b没态度（b加入到a的passed，a加入到b的liked）
+     * 当匹配成功时返回true
      * @param selector
      * @param selectee
      * @return
@@ -316,6 +317,33 @@ public abstract class Match
         Map<String,Set<String>> passedMap = getPassedMap();
         int maxChances = passedMap.size() - passedMap.get(user).size();
         return maxChances;
+    }
+
+
+    private static int matches = 0;
+    /**
+     * 对用户的选择进行记录并返回配对成功数量
+     */
+    public static int recordReturnMatches(String selector,Map<String,Integer> selectionRecord)
+    {
+        matches =0;
+        selectionRecord.forEach((selectee,decision)->
+        {
+            try
+            {
+                if(decision == 1)
+                {
+                    if(like(selector,selectee)) {matches++;}
+                }
+                else if(decision == -2){dislike(selector,selectee);}
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        });
+        return matches;
     }
 
 
