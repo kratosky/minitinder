@@ -9,6 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import match_operation.Match;
 import user.CheckedUser;
 import user.Gender;
 
@@ -34,7 +35,7 @@ public class HomePage
     private Label lblMessage = new Label("成功进入个人主页！");
     private Button btUpdate = new Button("更新资料");
     private Button btRecharge = new Button("充值");
-    private Button btList = new Button("已匹配用户");
+    private Button btMatchedOnes = new Button("已匹配用户");
     private Button btStart = new Button("开始匹配");
     private Button btQuit = new Button("退出账号");
     private Button btDeregistration = new Button("注销账户");
@@ -86,7 +87,7 @@ public class HomePage
         //设置联系方式字体
         taContact.setFont(new Font("Times", 14));
         taContact.setWrapText(true);
-        taContact.setPrefRowCount(2);
+        taContact.setPrefRowCount(4);
 
 
         // 填充左边信息
@@ -98,8 +99,10 @@ public class HomePage
         leftGridPane.add(new Label("出生年份:"), 0, 1);
         leftGridPane.add(lblYears, 1, 1);
         leftGridPane.add(new Label("照片:"), 0, 2);
-        leftGridPane.add(lblPhotoFileName, 1, 2);
-        leftGridPane.add(btShowPhoto, 2, 2);
+        HBox photoHBox = new HBox();
+        photoHBox.getChildren().addAll(lblPhotoFileName,btShowPhoto);
+        photoHBox.setSpacing(10.0);
+        leftGridPane.add(photoHBox, 1, 2);
         leftGridPane.add(new Label("联系方式:"), 0, 3);
         leftGridPane.add(taContact, 1, 3);
         taContact.setEditable(false);
@@ -146,7 +149,7 @@ public class HomePage
     private VBox setupBottomVBox(String username)
     {
         HBox paneForButtons = new HBox(20);
-        paneForButtons.getChildren().addAll(btUpdate,btRecharge, btList,btStart,btQuit,btDeregistration);
+        paneForButtons.getChildren().addAll(btUpdate,btRecharge, btMatchedOnes,btStart,btQuit,btDeregistration);
         paneForButtons.setAlignment(Pos.CENTER);
 
         btRecharge.setOnAction(e->{if(new Buy().display(username)){updateResource(username);}});
@@ -165,6 +168,30 @@ public class HomePage
                 stage.close();
             }
         });
+        btMatchedOnes.setOnAction(e->
+        {
+            try
+            {
+                //如果用户数大于等于1，则展示所有匹配用户
+                if(Match.getMatchedNumber(username)==0)
+                {
+                    lblMessage.setText("目前没有已匹配用户！");
+                }
+                else
+                {
+                    new MatchedOnes().display(username);
+                    stage.close();
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.printStackTrace();
+                System.out.println("读取matchedMap时出现问题！");
+            }
+
+
+        });
+
 
 
         VBox vBox =new VBox(30);

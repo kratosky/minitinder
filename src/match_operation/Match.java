@@ -346,5 +346,15 @@ public abstract class Match
         return matches;
     }
 
+    /**
+     * 获得给定用户的已匹配用户数
+     * @param user
+     * @return
+     */
+    public static int getMatchedNumber(String user)throws Exception
+    {
+        return getMatchedMap().get(user).size();
+    }
+
 
 }

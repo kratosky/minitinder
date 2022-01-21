@@ -11,6 +11,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import match_operation.Match;
 import user.CheckedUser;
 import user.Gender;
 
@@ -22,7 +23,7 @@ import java.util.Map;
 import static user.Gender.*;
 import static user.Gender.Male;
 
-public class Matching
+public class MatchedOnes
 {
     private final String[] genderDescr = {"男", "女", "其他"};
     private final Gender[] genderOptions = {Male, Female, Other};
@@ -31,55 +32,40 @@ public class Matching
     private Label lblcurrentSelectee = new Label();
     private Label lblGender = new Label();
     private Label lblAge = new Label();
-    private String currentSelecteePhoto;
+    private String currentMatchPhoto;
     private Button btShowPhoto = new Button("展示照片");
+    private TextArea taContact = new TextArea();
 
     /** Label for displaying an image and a title */
     private Label lblImageTitle = new Label();
     private TextArea taIntro = new TextArea();
-    private Label lblMessage = new Label("请对每一位选择喜欢，不喜欢，或不确定，完成匹配后点击提交！");
+    private Label lblMessage = new Label("这里展示的用户都是与您匹配成功的用户，您可以在这里查看他们的联系方式进行后续了解！");
     private Button btPrevious = new Button("<-");
     private Button btNext = new Button("->");
-    private Button btConfirm = new Button("完成选择");
+    private Button btDelete = new Button("解除匹配");
+    private Button btBackHome = new Button("返回主页");
 
 
     private Stage stage = new Stage();
 
-    private String selector;
-    private int leftLikes;
+    private String owner;
     private int currentIndex;
-    private CheckBox chkLike = new CheckBox("喜欢");
-    private CheckBox chkDislike = new CheckBox("不喜欢");
-    private CheckBox chkNotSure = new CheckBox("不确定");
-    private ArrayList<String> selecteeList;
-    private Map<String,Integer> selectionRecord;
+    private ArrayList<String> matchesList;
 
-    private ComboBox<String> cboSelectees = new ComboBox<>();
-    private Label lblLeftLikes = new Label();
-
-    private Map<String,Integer> initSelectionRecord(ArrayList<String> userToSelect)
-    {
-        Map<String,Integer> selectionRecord = new HashMap<>();
-        userToSelect.forEach(userName ->
-        {
-            selectionRecord.put(userName, 0);
-        });
-        return selectionRecord;
-    }
+    private ComboBox<String> cboMatches = new ComboBox<>();
 
 
 
 
 
-    public void display(String userName, int maxLikes, ArrayList<String> userToSelect)
+    public void display(String userName)
     {
         //对传入信息初始化：把传入的userList赋给属性,初始化记录选择结果
-        this.selector = userName;
-        this.selecteeList = userToSelect;
+        this.owner = userName;
+        try {this.matchesList = new ArrayList<String>(Match.getMatchedMap().get(userName));}
+        catch(Exception e){e.printStackTrace(); System.out.println("读取matchedMap出错！");}
         this.currentIndex = 0;
-        this.leftLikes = maxLikes;
-        this.lblLeftLikes.setText(String.valueOf(maxLikes));
-        this.selectionRecord = initSelectionRecord(userToSelect);
+
 
 
 
@@ -111,7 +97,7 @@ public class Matching
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 700);
-        stage.setTitle("用户"+selector+"的匹配界面"); // Set title
+        stage.setTitle("用户"+ owner +"的匹配界面"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.setMaximized(true);
         stage.show(); // Display the stage
@@ -120,19 +106,24 @@ public class Matching
     private HBox setupTopHBox()
     {
         HBox topHBox = new HBox();
-        ObservableList<String> items = FXCollections.observableArrayList(selecteeList);
-        cboSelectees.getItems().addAll(items);
-        cboSelectees.setOnAction(e -> updatePage(items.indexOf(cboSelectees.getValue())));
-        cboSelectees.setValue(selecteeList.get(0));
-        cboSelectees.setPrefWidth(500);
-        topHBox.getChildren().addAll(new Label("选择用户："),cboSelectees,new Label("剩余喜欢次数："),lblLeftLikes);
+        ObservableList<String> items = FXCollections.observableArrayList(matchesList);
+        cboMatches.getItems().addAll(items);
+        cboMatches.setOnAction(e -> updatePage(items.indexOf(cboMatches.getValue())));
+        cboMatches.setValue(matchesList.get(0));
+        cboMatches.setPrefWidth(500);
+        topHBox.getChildren().addAll(new Label("选择用户："), cboMatches);
         topHBox.setSpacing(10.0);
+        topHBox.setAlignment(Pos.CENTER);
         return topHBox;
     }
 
 
     private GridPane setupLeftGridPane()
     {
+        //设置联系方式字体
+        taContact.setFont(new Font("Times", 14));
+        taContact.setWrapText(true);
+        taContact.setPrefRowCount(5);
 
         // 填充左边信息
         GridPane leftGridPane = new GridPane();
@@ -146,14 +137,17 @@ public class Matching
         leftGridPane.add(lblAge, 1, 2);
         leftGridPane.add(new Label("照片:"), 0, 3);
         leftGridPane.add(btShowPhoto, 1, 3);
+        leftGridPane.add(new Label("联系方式:"), 0, 4);
+        leftGridPane.add(taContact, 1, 4);
+        taContact.setEditable(false);
         leftGridPane.setAlignment(Pos.CENTER);
         lblAge.setAlignment(Pos.BOTTOM_LEFT);
 
 
 
 
-        // 输入照片回车，可以预览照片
-        btShowPhoto.setOnAction(e -> {lblImageTitle.setGraphic(new ImageView("image/"+ currentSelecteePhoto));});
+        // 点击按键，可以预览照片
+        btShowPhoto.setOnAction(e -> {lblImageTitle.setGraphic(new ImageView("image/"+ currentMatchPhoto));});
         return leftGridPane;
     }
 
@@ -185,45 +179,13 @@ public class Matching
     private VBox setupBottomVBox()
     {
         HBox paneForButtons = new HBox(20);
-        paneForButtons.getChildren().addAll(chkLike,chkDislike,chkNotSure,btPrevious, btNext,btConfirm);
+        paneForButtons.getChildren().addAll(btPrevious, btNext, btBackHome,btDelete);
         paneForButtons.setAlignment(Pos.CENTER);
-
-        chkLike.setOnAction(e->
-                {
-                    if(leftLikes==0)
-                    {
-                        lblMessage.setText("当前已经没有剩余的喜欢次数！");
-                    }
-                    else
-                    {
-                        //避免重复点击喜欢，剩余喜欢数减少
-                        if(selectionRecord.get(lblcurrentSelectee.getText())!=1)
-                        {
-                            likesChangeBy(-1);
-                            setCheckBox(1);
-                            selectionRecord.put(lblcurrentSelectee.getText(),1);
-                        }
-
-                    }
-
-                });
-        chkDislike.setOnAction(e->
-                {
-                    if(chkLike.isSelected()){likesChangeBy(1);}//改变了原本的Like会增加剩余like数量
-                    setCheckBox(-2);
-                    selectionRecord.put(lblcurrentSelectee.getText(),-2);
-                });
-        chkNotSure.setOnAction(e->
-                {
-                    if(chkLike.isSelected()){likesChangeBy(1);}//改变了原本的Like会增加剩余like数量
-                    setCheckBox(-1);
-                    selectionRecord.put(lblcurrentSelectee.getText(),-1);
-                });
 
         btNext.setOnAction(e->
         {
-            lblMessage.setText("请对每一位选择喜欢，不喜欢，或不确定，完成匹配后点击提交！");
-            if(currentIndex==(selecteeList.size()-1))
+            lblMessage.setText("这里展示的用户都是与您匹配成功的用户，您可以在这里查看他们的联系方式进行后续了解！");
+            if(currentIndex==(matchesList.size()-1))
             {
                 lblMessage.setText("当前已经为最后一个用户！");
             }
@@ -237,7 +199,7 @@ public class Matching
 
         btPrevious.setOnAction(e->
         {
-            lblMessage.setText("请对每一位选择喜欢，不喜欢，或不确定，完成匹配后点击提交！");
+            lblMessage.setText("这里展示的用户都是与您匹配成功的用户，您可以在这里查看他们的联系方式进行后续了解！");
             if(currentIndex==0)
             {
                 lblMessage.setText("当前已经为第一个用户！");
@@ -249,12 +211,10 @@ public class Matching
             }
         });
 
-        btConfirm.setOnAction(e->
+        btBackHome.setOnAction(e->
         {
-            if(new MatchConfirmation().display(selector,selectionRecord))
-            {
-                stage.close();
-            }
+            new HomePage().display(owner);
+            stage.close();
         });
 
 
@@ -265,15 +225,7 @@ public class Matching
         return vBox;
     }
 
-    /**
-     * 对剩余的喜欢数进行改变
-     * @param i
-     */
-    private void likesChangeBy(int i)
-    {
-        leftLikes = leftLikes + i;
-        lblLeftLikes.setText(String.valueOf(leftLikes));
-    }
+
 
 
     private void setUserProperty(String name)
@@ -281,7 +233,8 @@ public class Matching
         CheckedUser user = CheckedUser.deserialize(name);
         lblcurrentSelectee.setText(name);
         lblAge.setText(String.valueOf(user.getAge()));
-        currentSelecteePhoto = user.getPhotoFileName();
+        currentMatchPhoto = user.getPhotoFileName();
+        taContact.setText(user.getContactInformation());
         taIntro.setText(user.getIntroduction());
         lblGender.setText(genderDescr[Arrays.asList(genderOptions).indexOf(user.getGender())]);
     }
@@ -292,46 +245,13 @@ public class Matching
      */
     private void updatePage(int index)
     {
-        String selectee = selecteeList.get(index);
+        String matchedUser = matchesList.get(index);
         //更新中间显示selectee信息
-        setUserProperty(selectee);
-        //更新checkBox
-        setCheckBox(selectionRecord.get(selectee));
+        setUserProperty(matchedUser);
         //更新comboBox
-        cboSelectees.setValue(selectee);
+        cboMatches.setValue(matchedUser);
     }
 
-    /**
-     * 通过传入signal值更新checkBox情况
-     */
-    private void setCheckBox(int signal)
-    {
-        if(signal==0)
-        {
-            chkLike.setSelected(false);
-            chkDislike.setSelected(false);
-            chkNotSure.setSelected(false);
-        }
-        else if(signal == 1)
-        {
-            chkLike.setSelected(true);
-            chkDislike.setSelected(false);
-            chkNotSure.setSelected(false);
-        }
-        else if(signal== -1)
-        {
-            chkLike.setSelected(false);
-            chkDislike.setSelected(false);
-            chkNotSure.setSelected(true);
-        }
-        else
-        {
-            chkLike.setSelected(false);
-            chkDislike.setSelected(true);
-            chkNotSure.setSelected(false);
-        }
-
-    }
 
 
 

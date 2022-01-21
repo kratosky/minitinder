@@ -100,7 +100,7 @@ public class Selection
         whoHeCanChose.removeAll(userToSelect);
         userToSelect.addAll(getRandomSelections(whoHeCanChose, maxNotLikedHim));
         this.actualChances = userToSelect.size();//此时赋给actualChances值，为真正可以选择的用户数
-        return new ArrayList<>(Arrays.asList(userToSelect.toArray(new String[0])));
+        return new ArrayList<>(userToSelect);
     }
 
 
@@ -115,7 +115,7 @@ public class Selection
 
         //创建随机数对象
         Random r = new Random(System.currentTimeMillis());
-        ArrayList<String> selectFromList = new ArrayList<>(Arrays.asList(selectFromSet.toArray(new String[0])));
+        ArrayList<String> selectFromList = new ArrayList<>(selectFromSet);
         ArrayList<String> selectedNames = new ArrayList<>();
         //判断集合的长度是不是小于10
         while (selectedNames.size()<expectNumbers)
