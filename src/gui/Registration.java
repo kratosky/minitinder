@@ -6,19 +6,20 @@ import javafx.geometry.HPos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import register.Register;
+import user_management.Register;
 import user.UncheckedUser;
 
 public class Registration extends Application
 {
   private Stage stage = new Stage();
   private TextField tfUserName = new TextField();
-  private TextField tfPassword = new TextField();
+  private PasswordField pfPassword = new PasswordField();
   private Button btLogin = new Button("登录");
   private Button btRegister = new Button("注册");
   private Button btModify = new Button("修改密码");
@@ -59,7 +60,7 @@ public class Registration extends Application
     gridPane.add(new Label("账号:"), 0, 0);
     gridPane.add(tfUserName, 1, 0);
     gridPane.add(new Label("密码:"), 0, 1);
-    gridPane.add(tfPassword, 1, 1);
+    gridPane.add(pfPassword, 1, 1);
     gridPane.add(btLogin, 0, 2);
     //gridPane.add(btRegister, 1, 2);
     //gridPane.add(btModify, 2, 2);
@@ -70,7 +71,7 @@ public class Registration extends Application
     // Set properties for UI
     gridPane.setAlignment(Pos.CENTER);
     tfUserName.setAlignment(Pos.BOTTOM_LEFT);
-    tfPassword.setAlignment(Pos.BOTTOM_LEFT);
+    pfPassword.setAlignment(Pos.BOTTOM_LEFT);
     GridPane.setHalignment(btLogin, HPos.LEFT);
     //GridPane.setHalignment(btRegister,HPos.RIGHT);
     //GridPane.setHalignment(btModify,HPos.LEFT);
@@ -92,7 +93,7 @@ public class Registration extends Application
   {
     // Get values from text fields
     String username = tfUserName.getText();
-    String password = tfPassword.getText();
+    String password = pfPassword.getText();
     if(username.isBlank()||password.isBlank())
     {
       lblMessage.setText("用户名和密码不能为空！");
@@ -144,7 +145,7 @@ public class Registration extends Application
   {
     // Get values from text fields
     String username = tfUserName.getText();
-    String password = tfPassword.getText();
+    String password = pfPassword.getText();
     if(username.isBlank()||password.isBlank())
     {
       lblMessage.setText("用户名和密码不能为空！");

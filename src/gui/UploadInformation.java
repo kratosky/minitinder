@@ -19,7 +19,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.Calendar;
 
-import checked_user_management.CheckedUserManage;
+import user_management.CheckedUserManage;
 
 import static user.Gender.*;
 
@@ -73,7 +73,7 @@ public class UploadInformation
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 700);
-        stage.setTitle("上传资料"); // Set title
+        stage.setTitle("用户"+username+"的资料上传界面"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.setMaximized(true);
         stage.show(); // Display the stage

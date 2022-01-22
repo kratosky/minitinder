@@ -1,8 +1,8 @@
-package checked_user_management;
+package user_management;
 
 import file_operation.FileDeletion;
 import match_operation.Match;
-import register.Register;
+import user_management.Register;
 import user.CheckedUser;
 import user.Gender;
 import user.UncheckedUser;

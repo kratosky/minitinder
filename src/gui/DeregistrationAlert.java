@@ -1,7 +1,7 @@
 
 package gui;
 
-import checked_user_management.CheckedUserManage;
+import user_management.CheckedUserManage;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

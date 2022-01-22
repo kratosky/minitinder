@@ -97,7 +97,8 @@ public class Selection
         }
         //在从剩下没有喜欢过他且他也没给态度的人中尽量凑齐
         int maxNotLikedHim = this.setChances - userToSelect.size();
-        whoHeCanChose.removeAll(userToSelect);
+        //whoHeCanChose.removeAll(userToSelect); //这种情况，允许在抽没喜欢过他的人的时候，还会随机抽到喜欢他的人，当没喜欢过他的人不够时，可以帮助增大抽取数量
+        whoHeCanChose.removeAll(whoLikedHim);//真正符合设定的情况
         userToSelect.addAll(getRandomSelections(whoHeCanChose, maxNotLikedHim));
         this.actualChances = userToSelect.size();//此时赋给actualChances值，为真正可以选择的用户数
         return new ArrayList<>(userToSelect);

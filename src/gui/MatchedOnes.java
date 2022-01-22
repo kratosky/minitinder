@@ -97,7 +97,7 @@ public class MatchedOnes
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 700);
-        stage.setTitle("用户"+ owner +"的匹配界面"); // Set title
+        stage.setTitle("用户"+ owner +"成功匹配的用户"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.setMaximized(true);
         stage.show(); // Display the stage

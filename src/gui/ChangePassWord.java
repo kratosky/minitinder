@@ -5,11 +5,12 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import register.Register;
+import user_management.Register;
 import user.UncheckedUser;
 
 public class ChangePassWord
@@ -17,8 +18,8 @@ public class ChangePassWord
 
     private Stage stage = new Stage();
     private TextField tfUserName = new TextField();
-    private TextField tfOriginalPassword = new TextField();
-    private TextField tfNewPassword = new TextField();
+    private PasswordField pfOriginalPassword = new PasswordField();
+    private PasswordField pfNewPassword = new PasswordField();
     private Button btModify = new Button("修改密码");
     private Button btReturn = new Button("返回登录界面");
     private Label lblMessage = new Label("请在正确输入原密码后修改新密码！");
@@ -43,9 +44,9 @@ public class ChangePassWord
         gridPane.add(new Label("账号:"), 0, 0);
         gridPane.add(tfUserName, 1, 0);
         gridPane.add(new Label("原密码:"), 0, 1);
-        gridPane.add(tfOriginalPassword, 1, 1);
+        gridPane.add(pfOriginalPassword, 1, 1);
         gridPane.add(new Label("新密码:"), 0, 2);
-        gridPane.add(tfNewPassword, 1, 2);
+        gridPane.add(pfNewPassword, 1, 2);
         gridPane.add(btModify, 0, 3);
         gridPane.add(btReturn, 1, 3);
 
@@ -53,7 +54,7 @@ public class ChangePassWord
         // Set properties for UI
         gridPane.setAlignment(Pos.CENTER);
         tfUserName.setAlignment(Pos.BOTTOM_LEFT);
-        tfOriginalPassword.setAlignment(Pos.BOTTOM_LEFT);
+        pfOriginalPassword.setAlignment(Pos.BOTTOM_LEFT);
         GridPane.setHalignment(btModify, HPos.LEFT);
         GridPane.setHalignment(btReturn,HPos.RIGHT);
 
@@ -73,7 +74,7 @@ public class ChangePassWord
     {
         // Get values from text fields
         String username = tfUserName.getText();
-        String password = tfOriginalPassword.getText();
+        String password = pfOriginalPassword.getText();
         try
         {
             //用户名被注册过显示注册过
@@ -86,7 +87,7 @@ public class ChangePassWord
                 if(originalPassword.equals(password))
                 {
                     lblMessage.setText("修改成功!");
-                    user.setPassword(tfNewPassword.getText());
+                    user.setPassword(pfNewPassword.getText());
                     user.compressSerialize();
                 }
                 else

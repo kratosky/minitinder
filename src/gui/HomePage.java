@@ -75,7 +75,7 @@ public class HomePage
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(totalGridPane, 1500, 700);
-        stage.setTitle("个人主页"); // Set title
+        stage.setTitle("用户"+username+"的个人主页"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.setMaximized(true);
         stage.show(); // Display the stage

@@ -59,7 +59,7 @@ public class Buy
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(borderPane, 550, 220);
-        stage.setTitle("匹配资源购买"); // Set title
+        stage.setTitle("用户"+username+"的匹配资源购买"); // Set title
         stage.setScene(scene); // Place the scene in the stage
         stage.showAndWait();  // 等待窗体关闭才继续
 
