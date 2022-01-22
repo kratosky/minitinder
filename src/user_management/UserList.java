@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Register
+public abstract class UserList
 {
     private static final File userFile = new File( "data" + File.separator + "userlist" );
 
@@ -17,7 +17,7 @@ public abstract class Register
         {
             //初始化生成序列化的userSet，文件名叫“userlist”
             Set<String> userSet = new HashSet<String>();
-            ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(Register.userFile));
+            ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(UserList.userFile));
             oo.writeObject(userSet);
             oo.flush();
             oo.close();
@@ -37,7 +37,7 @@ public abstract class Register
     public static Set<String> getUserSet() throws Exception
     {
         //获得usesr记录
-        ObjectInputStream oi = new ObjectInputStream(new FileInputStream(Register.userFile));
+        ObjectInputStream oi = new ObjectInputStream(new FileInputStream(UserList.userFile));
         try(oi)
         {
             return (Set<String>)oi.readObject();
@@ -51,7 +51,7 @@ public abstract class Register
      */
     public static void setUserSet(Set<String> userSet) throws Exception
     {
-        ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(Register.userFile));
+        ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(UserList.userFile));
         oo.writeObject(userSet);
         oo.flush();
         oo.close();

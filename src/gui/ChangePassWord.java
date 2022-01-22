@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import user_management.Register;
+import user_management.UserList;
 import user.UncheckedUser;
 
 public class ChangePassWord
@@ -78,7 +78,7 @@ public class ChangePassWord
         try
         {
             //用户名被注册过显示注册过
-            if(Register.containsUser(username))
+            if(UserList.containsUser(username))
             {
                 //无需判断用户是否是审查过的用户，利用多态性序列化取出原本的密码
                 UncheckedUser user = UncheckedUser.deserialize(username);

@@ -2,7 +2,6 @@ package user_management;
 
 import file_operation.FileDeletion;
 import match_operation.Match;
-import user_management.Register;
 import user.CheckedUser;
 import user.Gender;
 import user.UncheckedUser;
@@ -42,7 +41,7 @@ public abstract class CheckedUserManage
         try
         {
             Match.delCheckedUser(username);
-            Register.delUser(username);
+            UserList.delUser(username);
         }
         catch (Exception e) {e.printStackTrace();}
     }

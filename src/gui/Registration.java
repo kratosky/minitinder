@@ -12,7 +12,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import user_management.Register;
+import user_management.UserList;
 import user.UncheckedUser;
 
 public class Registration extends Application
@@ -102,7 +102,7 @@ public class Registration extends Application
     try
     {
       //用户名被注册过显示注册过
-      if(Register.containsUser(username))
+      if(UserList.containsUser(username))
       {
         //无需判断用户是否是审查过的用户，利用多态性序列化取出原本的密码
         String originalPassword = UncheckedUser.deserialize(username).getPassword();
@@ -154,7 +154,7 @@ public class Registration extends Application
     try
     {
       //用户名被注册过显示注册过
-      if(Register.containsUser(username))
+      if(UserList.containsUser(username))
       {
         lblMessage.setText("该用户名已被注册过！请更换用户名!");
       }
@@ -164,7 +164,7 @@ public class Registration extends Application
         //创建未检查用户并序列化存储
         UncheckedUser newUser = new UncheckedUser(username, password);
         newUser.compressSerialize();
-        Register.addUser(username);
+        UserList.addUser(username);
         lblMessage.setText("已成功注册!");
       }
     }

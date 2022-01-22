@@ -4,46 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;增加了解除匹配功能，至此所有功能已完成，且进行了小规模的试验，结果不错v1.0&quot;">
-      <change afterPath="$PROJECT_DIR$/data/users/12345.checked" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/users/杜德翔.checked" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/ddx.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/ddx1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/ddxYoung.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/dl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/dly.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/gls.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/hsh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/kratos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/ldh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/lt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/nvzhuang.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/shibaCook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/shibaEat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/shibaLike.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/shibaSuan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/sl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/sylm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/wsn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/image/yhc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/createUserData.java" afterDir="false" />
+    <list default="true" id="528ff444-720e-4f5c-b848-c6c281b0baef" name="Changes" comment="commit -m &quot;密码框，用户名+照片导入v1.1&quot;">
+      <change afterPath="$PROJECT_DIR$/data/users/做饭柴柴.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/刘德华.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/刘涛.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/媛媛.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/寂寞柴柴.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/战神.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/杜荷洋.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/死肥宅.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/狄龙.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/璐璐.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/皓儿.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/石原里美.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/苦涩柴柴.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/贪吃柴柴.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/郭老师.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/酸柴柴.checked" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/users/黑社会老大哥.checked" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/Revenue/Total_Revenue.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/matchRecord/liked" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/liked" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/matchRecord/matched" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/matched" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/matchRecord/passed" beforeDir="false" afterPath="$PROJECT_DIR$/data/matchRecord/passed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checked_user_management/CheckedUserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_management/CheckedUserManage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Buy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Buy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/12.checked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/123.checked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/1234.checked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/12345.checked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/杜德翔.checked" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/杜德翔.checked" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/ChangePassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ChangePassWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/DeregistrationAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DeregistrationAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MatchedOnes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MatchedOnes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SelectionSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SelectionSetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/UploadInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UploadInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/initiation/Initiation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/initiation/Initiation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/match_operation/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/match_operation/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/register/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_management/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/createUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/createUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_management/CheckedUserManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_management/CheckedUserManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user_management/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user_management/UserList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,8 +187,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testGenderArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.testGenderArrayList" />
+    <configuration name="createUserData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.createUserData" />
       <module name="jit-first-delivery" />
       <extension name="coverage">
         <pattern>
@@ -223,18 +218,18 @@
       <item itemvalue="Application.TestSeparator" />
       <item itemvalue="Application.Registration" />
       <item itemvalue="Application.Driver" />
-      <item itemvalue="Application.testGenderArrayList" />
       <item itemvalue="Application.testRandomSetSelection" />
       <item itemvalue="Application.ComboBoxDemo" />
       <item itemvalue="Application.Initiation" />
+      <item itemvalue="Application.createUserData" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Driver" />
+        <item itemvalue="Application.createUserData" />
         <item itemvalue="Application.Initiation" />
+        <item itemvalue="Application.Driver" />
         <item itemvalue="Application.ComboBoxDemo" />
         <item itemvalue="Application.testRandomSetSelection" />
-        <item itemvalue="Application.testGenderArrayList" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +271,8 @@
       <workItem from="1642576300045" duration="25710000" />
       <workItem from="1642654575421" duration="31798000" />
       <workItem from="1642743324975" duration="40537000" />
-      <workItem from="1642842737325" duration="4427000" />
+      <workItem from="1642842737325" duration="4670000" />
+      <workItem from="1642854799543" duration="6949000" />
     </task>
     <task id="LOCAL-00001" summary="commit -m &quot;彻底优化并重构整合了求哈希值模块&quot;">
       <created>1639920020330</created>
@@ -579,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642802645890</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="commit -m &quot;密码框，用户名+照片导入v1.1&quot;">
+      <created>1642854088097</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1642854088097</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="commit -m &quot;完善了log branch checkout merge gc功能的CLI接口与桩函数&quot;" />
     <MESSAGE value="commit -m &quot;增加并测试了branch 和checkout&quot;" />
     <MESSAGE value="commit -m &quot;配置好了reset 三个档的接口&quot;" />
     <MESSAGE value="commit -m &quot;增加了index类&quot;" />
@@ -624,7 +626,8 @@
     <MESSAGE value="commit -m &quot;连通了之前的功能&quot;" />
     <MESSAGE value="commit -m &quot;增加了查看已匹配用户的功能&quot;" />
     <MESSAGE value="commit -m &quot;增加了解除匹配功能，至此所有功能已完成，且进行了小规模的试验，结果不错v1.0&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;增加了解除匹配功能，至此所有功能已完成，且进行了小规模的试验，结果不错v1.0&quot;" />
+    <MESSAGE value="commit -m &quot;密码框，用户名+照片导入v1.1&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit -m &quot;密码框，用户名+照片导入v1.1&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

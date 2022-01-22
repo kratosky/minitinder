@@ -4,7 +4,7 @@ import java.io.*;
 import file_operation.*;
 import financial_management.Revenue;
 import match_operation.Match;
-import user_management.Register;
+import user_management.UserList;
 
 
 public class Initiation
@@ -76,7 +76,7 @@ public class Initiation
         //生成描述文件
         FileCreation.createFile(dataPath , "Description.txt", "All code written by DDX");
         //生成data文件夹下的其余子文件
-        Register.initRegister();
+        UserList.initRegister();
         FileCreation.createDirectory(dataPath, "users");
         FileCreation.createDirectory(dataPath, "matchRecord");
         FileCreation.createDirectory(dataPath, "Revenue");
